@@ -6,4 +6,5 @@ import com.aasihyaana.aashiyaanabackend.dto.Room;
 
 public interface RoomsRepositoryService {
     List<Room> findAllLivingRoomsList();
+    List<Room> findAllBedRoomsList();
 }

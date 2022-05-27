@@ -5,5 +5,6 @@ import com.aasihyaana.aashiyaanabackend.exchanges.GetRoomsResponse;
 public interface RoomsService {
     
     GetRoomsResponse getLivingRoomData();
+    GetRoomsResponse getBedRoomData();
     
 }

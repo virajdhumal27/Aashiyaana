@@ -1,9 +1,12 @@
 package com.aasihyaana.aashiyaanabackend.entity;
 
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+
+import com.aasihyaana.aashiyaanabackend.constants.RoomType;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -17,10 +20,14 @@ import lombok.NoArgsConstructor;
 public class RoomEntity {
     @Id
     private Integer room_id;
-    private String room_title;
+    @Column(name ="room_title")
+    private String roomTitle;
     private String description;
+    @Column(name = "room_type")
+    private RoomType roomType;
     private Double price;
     private Double stars;
     private Integer reviews;
-    private String image_url;
+    @Column(name = "image_url")
+    private String imageUrl;
 }

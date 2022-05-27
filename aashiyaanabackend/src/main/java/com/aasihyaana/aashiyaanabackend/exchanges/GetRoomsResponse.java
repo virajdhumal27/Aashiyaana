@@ -12,5 +12,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class GetRoomsResponse {
-    List<Room> rooms;
+    private Boolean isLoggedIn;
+    private List<Room> rooms;
 }

@@ -17,22 +17,18 @@ public class RoomsServiceImpl implements RoomsService {
 
     @Override
     public GetRoomsResponse getLivingRoomData() {
-        // List<Room> rooms = new ArrayList<>();
-        
-        // Room room = new Room();
-        // room.setId(1);
-        // room.setTitle("Title");
-        // room.setDescription("Description");
-        // room.setPrice(200.00);
-        // room.setStars(5.0);
-        // room.setReviews(1);
-        // room.setImage_url("URL");
-        // rooms.add(room);
 
         List<Room> rooms = roomsRepositoryService.findAllLivingRoomsList();
         
-        GetRoomsResponse response = new GetRoomsResponse(rooms);
+        GetRoomsResponse response = new GetRoomsResponse(Boolean.TRUE, rooms);
         return response;
+    }
+
+    @Override
+    public GetRoomsResponse getBedRoomData() {
+
+        List<Room> rooms = roomsRepositoryService.findAllBedRoomsList();
+        return new GetRoomsResponse(Boolean.TRUE, rooms);
     }
     
 }
