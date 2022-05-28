@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class PostLoginReponse {
-    private Boolean isloginSuccess;
+    private Boolean isLoginSuccess;
+    private Integer activeUserId;
     private String message;
 }

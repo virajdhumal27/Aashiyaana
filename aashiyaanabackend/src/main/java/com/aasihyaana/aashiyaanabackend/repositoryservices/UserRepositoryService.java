@@ -4,5 +4,5 @@ import org.springframework.stereotype.Service;
 
 @Service
 public interface UserRepositoryService {
-    void findLoginUser(String username, String password);
+    Boolean findLoginUser(String username, String password);
 }
