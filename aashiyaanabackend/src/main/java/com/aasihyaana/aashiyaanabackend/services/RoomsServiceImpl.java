@@ -18,6 +18,9 @@ public class RoomsServiceImpl implements RoomsService {
     @Override
     public GetRoomsResponse getLivingRoomData() {
 
+        // if (ActiveUsers.checkUserActive(1)) {
+        //     return new GetRoomsResponse(Boolean.FALSE, null);
+        // }
         List<Room> rooms = roomsRepositoryService.findAllLivingRoomsList();
         
         GetRoomsResponse response = new GetRoomsResponse(Boolean.TRUE, rooms);

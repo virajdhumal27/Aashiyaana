@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class PostSignupResponse {
-    private Boolean isSignupSuccess;
+public class PostLogoutResponse {
+    private Boolean isLogoutSuccess;
     private String message;
 }

@@ -12,6 +12,9 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+/**
+ * The {@code RoomEntity} class describes the columns of table {@code rooms}.
+ */
 @Data
 @Entity
 @AllArgsConstructor

@@ -9,6 +9,14 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+/**
+ * The {@code RoomsController} class handles the request related to living rooms, 
+ * bedrooms and kitchen. Once request is processed, required data is sent back
+ * in form of {@code GetRoomsResponse}.
+ * 
+ *  @author Viraj Dhumal
+ * @since version 1
+ */
 @RestController
 // @CrossOrigin(origins = {"http://127.0.0.1:5500", "http://127.0.0.1:9191"})
 @CrossOrigin(origins = "*")
