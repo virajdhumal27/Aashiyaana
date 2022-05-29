@@ -1,14 +1,60 @@
-console.log(API_URL);
-callApi();
+isUserLoggedIn();
 
-showCards();
-createLoadMoreButton();
+// showCards();
 
-showProductsPreview();
+// createLoadMoreButton();
 
-previewCardsLogic();
+// showProductsPreview();
 
-loadMoreCards();
+// previewCardsLogic();
+
+// loadMoreCards();
+
+function isUserLoggedIn() {
+  alert(localStorage.getItem('userid') + ", " + localStorage.getItem('username'));
+  if (localStorage.getItem('userid') == null || localStorage.getItem('userid') == "") {
+    console.log("No storage")
+    window.location.replace("http://127.0.0.1:5500/login_form.html");
+  }
+
+  const loginBtn = document.getElementById("login-btn");
+  const logoutBtn = document.getElementById("logout-btn");
+  
+  loginBtn.classList.add("d-none");
+  logoutBtn.classList.remove("d-none");
+}
+
+async function handleLogoutButton() {
+  const API_URL = 'http://localhost:9191/login/userLogout';
+
+  const userid = localStorage.getItem(USER_ID);
+  const username = localStorage.getItem(USER_NAME);
+  const data = { userid, username };
+  const options = {
+      method: 'POST',
+      headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+  };
+
+  const response = await fetch(API_URL, options);
+  const responseData = await response.json();
+
+  console.log(responseData);
+  localStorage.removeItem(USER_ID);
+  localStorage.removeItem(USER_NAME);
+
+  const loginBtn = document.getElementById("login-btn");
+  const logoutBtn = document.getElementById("logout-btn");
+  
+  loginBtn.classList.remove("d-none");
+  logoutBtn.classList.add("d-none");
+
+  window.location.replace("http://127.0.0.1/login_form.html");
+
+}
 
 function previewCardsLogic() {
   let preveiwContainer = document.querySelector('.products-preview');
@@ -65,7 +111,7 @@ function showCards() {
 
 function createCard(cardNo) {
   const product = document.createElement("div");
-  const image = document.createElement("img");
+  let image = document.createElement("img");
   const h3 = document.createElement("h3");
   const priceTag = document.createElement("div");
 
@@ -73,7 +119,7 @@ function createCard(cardNo) {
 
 
 
-  image.src = "http://127.0.0.1:5500/flower.jpg";
+  image.src = "./flower.jpg";
   image.alt = "IMAGE";
   image.height = "450px";
   image.width = "300px";
@@ -114,6 +160,7 @@ function showProductsPreview() {
 
   for (let i = 0; i < 30; i++) {
     const my_preview = createProductsPreview(i + 1);
+    console.log(my_preview);
     productsPreview.appendChild(my_preview);
   }
 
@@ -122,7 +169,6 @@ function showProductsPreview() {
 
 function createProductsPreview(cardNo) {
 
-  
   const preview = document.createElement("div");
 
   const iTag = document.createElement("i");
@@ -149,7 +195,7 @@ function createProductsPreview(cardNo) {
 
   iTag.classList.add("fas");
   iTag.classList.add("fa-times");
-  image.src = "http://127.0.0.1:5500/flower.jpg";
+  image.src = "flower.jpg";
   image.height = "350";
   image.width = "250";
   image.alt = "IMAGE";
@@ -208,13 +254,6 @@ function createProductsPreview(cardNo) {
   preview.appendChild(buttons);
 
   return preview;
-}
-
-async function callApi() {
-  const response = await fetch(API_URL);
-  const data = await response.json();
-  console.log(data);
-  // return [data.rooms];
 }
 
 /* rooms: [

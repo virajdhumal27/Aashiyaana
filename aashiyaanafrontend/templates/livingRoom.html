@@ -17,7 +17,7 @@
       <link href="https://fonts.googleapis.com/css2?family=Allura&family=Dancing+Script:wght@500&family=Radio+Canada:wght@300&family=Raleway:wght@100&display=swap" rel="stylesheet">
 
    <!-- custom js file link  -->
-   <script src="templates.js" defer></script>
+   <script src="template.js" defer></script>
 
 </head>
 
@@ -60,7 +60,8 @@
                       <a class="nav-link" href="#">Contact Us</a>
                   </li> -->
                   <li class="nav-item">
-                      <a class="nav-link" href="../login-signup/login_form.html">Sign In/Sign Up</a>
+                      <a class="nav-link" id="login-btn" href="../login-signup/login_form.html">Sign In/Sign Up</a>
+                      <a class="nav-link d-none" id="logout-btn" href="" onclick="handleLogoutButton()">Logout/Sign Out</a>
                   </li>
                   <li class="nav-item">
                       <a class="nav-link" href="../misc/huecombos.html">Hue Combos</a>
@@ -782,7 +783,7 @@
       </div>
 
 
-
+      
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"></script>
