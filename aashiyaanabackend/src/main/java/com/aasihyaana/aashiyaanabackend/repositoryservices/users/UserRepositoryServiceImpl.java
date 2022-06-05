@@ -1,5 +1,7 @@
 package com.aasihyaana.aashiyaanabackend.repositoryservices.users;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,11 +17,11 @@ public class UserRepositoryServiceImpl implements UserRepositoryService {
 
     @Override
     public User findLoginUser(String username) {
-        UserEntity loginUser = userRepository.findByUsername(username).get(0);
-
-        if(loginUser == null) {
+        List<UserEntity> usersList = userRepository.findByUsername(username);
+        if(usersList == null || usersList.size() == 0) {
             return null;
         }
+        UserEntity loginUser = usersList.get(0);
 
         User user = new User();
         user.setUserId(loginUser.getUserId());

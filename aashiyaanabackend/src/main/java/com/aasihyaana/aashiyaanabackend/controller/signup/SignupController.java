@@ -18,11 +18,11 @@ import org.springframework.web.bind.annotation.RestController;
  * @since version 1
  */
 @RestController
-@CrossOrigin(origins = "http://127.0.0.1:5500")
+@CrossOrigin(origins = "*")
 @RequestMapping(SignupController.SIGNUP_ENDPOINT_API)
 public class SignupController {
-    public static final String SIGNUP_ENDPOINT_API = "signup";
-    public static final String SIGNUP_API = "signupUser";
+    public static final String SIGNUP_ENDPOINT_API = "/signup";
+    public static final String SIGNUP_API = "/signupUser";
 
     @Autowired
     private SignupService signupService;

@@ -24,7 +24,6 @@ public class RoomsRepositoryServiceDummyImpl implements RoomsRepositoryService {
         Room room = new Room();
         room.setId(roomEntity.getRoomId());
         room.setTitle(roomEntity.getRoomTitle());
-        room.setDescription(roomEntity.getDescription());
         room.setRoomType(roomEntity.getRoomType());
         room.setPrice(roomEntity.getPrice());
         room.setStars(roomEntity.getStars());
@@ -47,7 +46,6 @@ public class RoomsRepositoryServiceDummyImpl implements RoomsRepositoryService {
         for (int i = 1; i < 31; i++) {
             RoomEntity roomEntity = new RoomEntity();
             roomEntity.setRoomTitle("Title" + i);
-            roomEntity.setDescription("Description" + i);
             roomEntity.setRoomId(i);
             if (i % 3 == 0) {
                 roomEntity.setRoomType(RoomType.BEDROOM);

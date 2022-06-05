@@ -30,9 +30,24 @@ public class RoomsServiceImpl implements RoomsService {
     }
 
     @Override
-    public GetRoomsResponse getBedRoomData() {
+    public GetRoomsResponse getBedRoomData(Integer userId) {
+
+        if (!ActiveUsers.checkUserActive(userId)) {
+            return new GetRoomsResponse(Boolean.FALSE, null);
+        }
 
         List<Room> rooms = roomsRepositoryService.findAllBedRoomsList();
+        return new GetRoomsResponse(Boolean.TRUE, rooms);
+    }
+
+    @Override
+    public GetRoomsResponse getKitchensData(Integer userId) {
+
+        if (!ActiveUsers.checkUserActive(userId)) {
+            return new GetRoomsResponse(Boolean.FALSE, null);
+        }
+
+        List<Room> rooms = roomsRepositoryService.findAllKitchensList();
         return new GetRoomsResponse(Boolean.TRUE, rooms);
     }
     

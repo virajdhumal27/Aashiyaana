@@ -28,5 +28,10 @@ public interface RoomsRepositoryService {
      */
     List<Room> findAllBedRoomsList();
 
+    /**
+     * Returns a list of all kitchens data form the rooms table.
+     * 
+     * @return Returns {@code List<Room>} collection if present, else null.
+     */
     List<Room> findAllKitchensList();
 }

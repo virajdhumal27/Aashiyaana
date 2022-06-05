@@ -26,5 +26,7 @@ public class SignupServiceImpl implements SignupService {
         userRepositoryService.signupUser(newUser);
         return new PostSignupResponse(Boolean.TRUE, "Signup Success");
     }
+
+    // public PostSignupResponse register
     
 }

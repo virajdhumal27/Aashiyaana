@@ -26,7 +26,6 @@ public class RoomEntity {
     private Integer roomId;
     @Column(name ="room_title")
     private String roomTitle;
-    private String description;
     @Column(name = "room_type")
     private RoomType roomType;
     private Double price;

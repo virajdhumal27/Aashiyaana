@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @since version 1
  */
 @RestController
-@CrossOrigin(origins = "http://127.0.0.1:5500")
+@CrossOrigin(origins = "*")
 @RequestMapping(LoginController.LOGIN_ENDPOINT_API)
 public class LoginController {
     public static final String LOGIN_ENDPOINT_API = "/login";
@@ -36,6 +36,7 @@ public class LoginController {
         return loginService.loginUser(loginRequest);
     }
 
+    @PostMapping(LOGOUT_API)
     public PostLogoutResponse logoutUser(@RequestBody PostLogoutRequest logoutRequest) {
         return loginService.logoutUser(logoutRequest);
     }

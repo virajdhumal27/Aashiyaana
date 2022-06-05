@@ -22,6 +22,13 @@ public interface RoomsService {
      * 
      * @return Returns all the data for bedroom.
      */
-    GetRoomsResponse getBedRoomData();
+    GetRoomsResponse getBedRoomData(Integer userId);
+
+    /**
+     * Returns the Kitchen data in {@code GetRoomsResponse} object.
+     * 
+     * @return Returns all the data for kitchen.
+     */
+    GetRoomsResponse getKitchensData(Integer userId);
     
 }

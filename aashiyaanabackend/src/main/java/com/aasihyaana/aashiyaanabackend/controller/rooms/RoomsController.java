@@ -25,9 +25,9 @@ import org.springframework.web.bind.annotation.RestController;
 public class RoomsController {
     
     public static final String ROOM_ENDPOINT = "/rooms";
-    public static final String LIVING_ROOM_API = "/livingrooms/users/{id}";
-    public static final String BEDROOM_API = "/bedrooms/users/{id}";
-    public static final String KITCHEN_API = "/kitchens/users/{id}";
+    public static final String LIVING_ROOM_API = "/livingrooms/users/{userId}";
+    public static final String BEDROOM_API = "/bedrooms/users/{userId}";
+    public static final String KITCHEN_API = "/kitchens/users/{userId}";
 
     @Autowired
     private RoomsService roomsService;
@@ -40,11 +40,11 @@ public class RoomsController {
 
     @GetMapping(BEDROOM_API)
     public GetRoomsResponse getBedRoomData(@PathVariable Integer userId) {
-        return roomsService.getBedRoomData();
+        return roomsService.getBedRoomData(userId);
     }
 
     @GetMapping(KITCHEN_API)
     public GetRoomsResponse getKitchenData(@PathVariable Integer userId) {
-        return roomsService.getBedRoomData();
+        return roomsService.getBedRoomData(userId);
     }
 }

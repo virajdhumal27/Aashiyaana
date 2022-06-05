@@ -28,7 +28,7 @@ public class LoginServiceImpl implements LoginService {
             return new PostLoginReponse(Boolean.FALSE, -1, "User not found!");
         }
 
-        if(password == user.getPassword()) {
+        if(!password.equals(user.getPassword())) {
             return new PostLoginReponse(Boolean.FALSE, -1, "Password is incorrect!");
         }
         
