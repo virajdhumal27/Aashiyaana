@@ -23,7 +23,7 @@ public class UserEntity {
     private Integer userId;
     private String username;
     private String email;
-    @Column(name = "mobile_number")
-    private String mobileNumber;
+    @Column(name = "phone_number")
+    private String phoneNumber;
     private String password;
 }

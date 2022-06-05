@@ -1,11 +1,12 @@
 package com.aasihyaana.aashiyaanabackend.controller.rooms;
 
 import com.aasihyaana.aashiyaanabackend.exchanges.GetRoomsResponse;
-import com.aasihyaana.aashiyaanabackend.services.RoomsService;
+import com.aasihyaana.aashiyaanabackend.services.roomsservice.RoomsService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -14,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
  * bedrooms and kitchen. Once request is processed, required data is sent back
  * in form of {@code GetRoomsResponse}.
  * 
- *  @author Viraj Dhumal
+ * @author Viraj Dhumal
  * @since version 1
  */
 @RestController
@@ -24,20 +25,26 @@ import org.springframework.web.bind.annotation.RestController;
 public class RoomsController {
     
     public static final String ROOM_ENDPOINT = "/rooms";
-    public static final String LIVING_ROOM_API = "/livingrooms";
-    public static final String BEDROOM_API = "/bedrooms";
+    public static final String LIVING_ROOM_API = "/livingrooms/users/{id}";
+    public static final String BEDROOM_API = "/bedrooms/users/{id}";
+    public static final String KITCHEN_API = "/kitchens/users/{id}";
 
     @Autowired
     private RoomsService roomsService;
 
     @GetMapping(LIVING_ROOM_API)
-    public GetRoomsResponse getLivingRoomData() {
-        
-        return roomsService.getLivingRoomData();
+    public GetRoomsResponse getLivingRoomData(@PathVariable Integer userId) {
+        System.out.println(userId);
+        return roomsService.getLivingRoomData(userId);
     }
 
     @GetMapping(BEDROOM_API)
-    public GetRoomsResponse getBedRoomData() {
+    public GetRoomsResponse getBedRoomData(@PathVariable Integer userId) {
+        return roomsService.getBedRoomData();
+    }
+
+    @GetMapping(KITCHEN_API)
+    public GetRoomsResponse getKitchenData(@PathVariable Integer userId) {
         return roomsService.getBedRoomData();
     }
 }

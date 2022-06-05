@@ -4,7 +4,7 @@ import com.aasihyaana.aashiyaanabackend.exchanges.PostLoginReponse;
 import com.aasihyaana.aashiyaanabackend.exchanges.PostLoginRequest;
 import com.aasihyaana.aashiyaanabackend.exchanges.PostLogoutRequest;
 import com.aasihyaana.aashiyaanabackend.exchanges.PostLogoutResponse;
-import com.aasihyaana.aashiyaanabackend.services.LoginService;
+import com.aasihyaana.aashiyaanabackend.services.loginservice.LoginService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -33,11 +33,10 @@ public class LoginController {
 
     @PostMapping(LOGIN_API)
     public PostLoginReponse checkUser(@RequestBody PostLoginRequest loginRequest) {
-        System.out.println(loginRequest.getUsername() + " " + loginRequest.getPassword());
         return loginService.loginUser(loginRequest);
     }
 
     public PostLogoutResponse logoutUser(@RequestBody PostLogoutRequest logoutRequest) {
-        return null;
+        return loginService.logoutUser(logoutRequest);
     }
 }

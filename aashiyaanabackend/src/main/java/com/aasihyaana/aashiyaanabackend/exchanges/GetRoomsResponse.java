@@ -8,6 +8,13 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+/**
+ * The {@code GetRoomsResponse} class object will be sent to templates of living
+ * rooms, bedrooms and kitchen frontend as response.
+ * 
+ * @author Viraj Dhumal
+ * @since version 1
+ */
 @Data
 @AllArgsConstructor
 @NoArgsConstructor

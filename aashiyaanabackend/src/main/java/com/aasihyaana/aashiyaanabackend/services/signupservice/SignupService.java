@@ -1,4 +1,4 @@
-package com.aasihyaana.aashiyaanabackend.services;
+package com.aasihyaana.aashiyaanabackend.services.signupservice;
 
 import com.aasihyaana.aashiyaanabackend.exchanges.PostSignUpRequest;
 import com.aasihyaana.aashiyaanabackend.exchanges.PostSignupResponse;

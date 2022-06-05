@@ -2,7 +2,7 @@ package com.aasihyaana.aashiyaanabackend.controller.signup;
 
 import com.aasihyaana.aashiyaanabackend.exchanges.PostSignUpRequest;
 import com.aasihyaana.aashiyaanabackend.exchanges.PostSignupResponse;
-import com.aasihyaana.aashiyaanabackend.services.SignupService;
+import com.aasihyaana.aashiyaanabackend.services.signupservice.SignupService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;

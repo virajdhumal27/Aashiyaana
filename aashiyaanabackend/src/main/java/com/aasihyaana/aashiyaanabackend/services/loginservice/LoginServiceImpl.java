@@ -1,4 +1,4 @@
-package com.aasihyaana.aashiyaanabackend.services;
+package com.aasihyaana.aashiyaanabackend.services.loginservice;
 
 import com.aasihyaana.aashiyaanabackend.constants.ActiveUsers;
 import com.aasihyaana.aashiyaanabackend.dto.User;
@@ -6,7 +6,7 @@ import com.aasihyaana.aashiyaanabackend.exchanges.PostLoginReponse;
 import com.aasihyaana.aashiyaanabackend.exchanges.PostLoginRequest;
 import com.aasihyaana.aashiyaanabackend.exchanges.PostLogoutRequest;
 import com.aasihyaana.aashiyaanabackend.exchanges.PostLogoutResponse;
-import com.aasihyaana.aashiyaanabackend.repositoryservices.UserRepositoryService;
+import com.aasihyaana.aashiyaanabackend.repositoryservices.users.UserRepositoryService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -22,15 +22,18 @@ public class LoginServiceImpl implements LoginService {
         String username = loginRequest.getUsername();
         String password = loginRequest.getPassword();
 
-        User user = userRepositoryService.findLoginUser(username, password);
+        User user = userRepositoryService.findLoginUser(username);
 
-        if(user != null) {
-
-            Integer userId = ActiveUsers.addNewActiveUser(user.getUserId(), username);
-            return new PostLoginReponse(Boolean.TRUE, userId, "User Logged In");
+        if(user == null) {
+            return new PostLoginReponse(Boolean.FALSE, -1, "User not found!");
         }
 
-        return new PostLoginReponse(Boolean.FALSE, -1, "User not found!");
+        if(password == user.getPassword()) {
+            return new PostLoginReponse(Boolean.FALSE, -1, "Password is incorrect!");
+        }
+        
+        Integer userId = ActiveUsers.addNewActiveUser(user.getUserId(), username);
+        return new PostLoginReponse(Boolean.TRUE, userId, "User Logged In!");
     }
 
     @Override
@@ -39,7 +42,7 @@ public class LoginServiceImpl implements LoginService {
 
         ActiveUsers.removeActiveUser(userId);
 
-        return new PostLogoutResponse(Boolean.TRUE, "Logout Successfully");
+        return new PostLogoutResponse(Boolean.TRUE, "Logout Successful!");
     }
     
 }

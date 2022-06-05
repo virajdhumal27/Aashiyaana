@@ -22,7 +22,8 @@ import lombok.NoArgsConstructor;
 @Table(name = "rooms")
 public class RoomEntity {
     @Id
-    private Integer room_id;
+    @Column(name ="room_id")
+    private Integer roomId;
     @Column(name ="room_title")
     private String roomTitle;
     private String description;

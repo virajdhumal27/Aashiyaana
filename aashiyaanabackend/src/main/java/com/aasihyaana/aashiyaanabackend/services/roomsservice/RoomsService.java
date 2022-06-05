@@ -1,4 +1,4 @@
-package com.aasihyaana.aashiyaanabackend.services;
+package com.aasihyaana.aashiyaanabackend.services.roomsservice;
 
 import com.aasihyaana.aashiyaanabackend.exchanges.GetRoomsResponse;
 
@@ -15,7 +15,7 @@ public interface RoomsService {
      * 
      * @return Returns all the data for living rooms.
      */
-    GetRoomsResponse getLivingRoomData();
+    GetRoomsResponse getLivingRoomData(Integer userId);
 
     /**
      * Returns the Bedroom data in {@code GetRoomsResponse} object.
