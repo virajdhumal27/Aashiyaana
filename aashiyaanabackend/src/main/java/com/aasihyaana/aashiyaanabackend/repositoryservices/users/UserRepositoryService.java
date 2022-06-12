@@ -1,6 +1,7 @@
 package com.aasihyaana.aashiyaanabackend.repositoryservices.users;
 
 import com.aasihyaana.aashiyaanabackend.dto.User;
+import com.aasihyaana.aashiyaanabackend.exceptions.UserNotFoundException;
 
 import org.springframework.stereotype.Service;
 
@@ -19,7 +20,7 @@ public interface UserRepositoryService {
      * @param username Username required to find the user who wants to log in.
      * @return Returns the {@code User} object if present, else null.
      */
-    User findLoginUser(String username);
+    User findLoginUser(String username) throws UserNotFoundException;
 
     /**
      * Adds the new user to the table.

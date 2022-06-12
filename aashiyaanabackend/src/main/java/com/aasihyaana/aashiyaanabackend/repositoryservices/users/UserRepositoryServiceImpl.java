@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.aasihyaana.aashiyaanabackend.dto.User;
 import com.aasihyaana.aashiyaanabackend.entity.UserEntity;
+import com.aasihyaana.aashiyaanabackend.exceptions.UserNotFoundException;
 import com.aasihyaana.aashiyaanabackend.repositories.UserRepository;
 
 @Service
@@ -16,10 +17,10 @@ public class UserRepositoryServiceImpl implements UserRepositoryService {
     private UserRepository userRepository;
 
     @Override
-    public User findLoginUser(String username) {
+    public User findLoginUser(String username) throws UserNotFoundException {
         List<UserEntity> usersList = userRepository.findByUsername(username);
         if(usersList == null || usersList.size() == 0) {
-            return null;
+            throw new UserNotFoundException("User not Found!");
         }
         UserEntity loginUser = usersList.get(0);
 
