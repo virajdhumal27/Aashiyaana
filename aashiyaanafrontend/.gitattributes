@@ -1,0 +1,10 @@
+pages/home/*.png filter=lfs diff=lfs merge=lfs -text
+pages/home/*.jpg filter=lfs diff=lfs merge=lfs -text
+pages/templates/living_room/*.jpg filter=lfs diff=lfs merge=lfs -text
+pages/templates/living_room/*.jpeg filter=lfs diff=lfs merge=lfs -text
+pages/templates/living_room/*.webp filter=lfs diff=lfs merge=lfs -text
+pages/templates/kitchen/*.jpg filter=lfs diff=lfs merge=lfs -text
+pages/templates/kitchen/*.avif filter=lfs diff=lfs merge=lfs -text
+pages/templates/bedroom/*.jpg filter=lfs diff=lfs merge=lfs -text
+pages/templates/bedroom/*.jpeg filter=lfs diff=lfs merge=lfs -text
+pages/templates/bedroom/*.webp filter=lfs diff=lfs merge=lfs -text

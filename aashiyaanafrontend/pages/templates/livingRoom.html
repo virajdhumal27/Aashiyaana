@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="template.css">
+   <!-- <link rel="stylesheet" href="index.css"> -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+   <link
+      href="https://fonts.googleapis.com/css2?family=Allura&family=Dancing+Script:wght@500&family=Radio+Canada:wght@300&family=Raleway:wght@100&display=swap"
+      rel="stylesheet">
+
+   <script>
+      let livingRoomData = true;
+      let bedroomData = false;
+      let kitchenData = false;
+   </script>
+
+   <!-- custom js file link  -->
+   <script src="templates.js" defer></script>
+
+</head>
+
+<body>
+
+   <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container-fluid">
+         <a class="navbar-brand d-lg-none" href="../home/index.html"><img src="../home/logo.png"
+               style="border-radius:50%" alt="Logo"></a>
+         <button class="navbar-toggler d-flex d-lg-none flex-column justify-content-around" type="button"
+            data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="toggler-icon top-bar"></span>
+            <span class="toggler-icon middle-bar"></span>
+            <span class="toggler-icon bottom-bar"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+               <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="../home/index.html">Home</a>
+               </li>
+               <li class="nav-item dropdown">
+                  <a class="nav-link active dropdown-toggle" href="#" style="color: crimson;" id="navbarDropdown"
+                     role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                     Templates
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color:#dc6af888; ">
+                     <li><a class="dropdown-item"
+                           style="color:#005583; font-weight: bold; font-size: 17px; padding: 9px 100px 9px 18px;"
+                           href="../templates/livingRoom.html">Living Room</a></li>
+                     <li><a class="dropdown-item"
+                           style="color:#005583; font-weight: bold; font-size: 17px; padding: 9px 100px 9px 18px;"
+                           href="../templates/bedroom.html">BedRoom</a></li>
+                     <li><a class="dropdown-item"
+                           style="color:#005583; font-weight: bold; font-size: 17px; padding: 9px 100px 9px 18px;"
+                           href="../templates/kitchen.html">Kitchen</a></li>
+                     <li>
+                        <hr class="dropdown-divider">
+                     </li>
+                     <li><a class="dropdown-item"
+                           style="color:#005583; font-weight: bold; font-size: 17px; padding: 9px 20px 9px 18px;"
+                           href="../templates/furniture.html">Custom Designs</a></li>
+                  </ul>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="../home/index.html#footer">About Us</a>
+               </li>
+               <a class="navbar-brand d-none d-lg-block" href="../home/index.html"><img src="../home/logo.png"
+                     alt="Logo" style="border-radius:50%;"></a>
+               <li class="nav-item">
+                  <span class="nav-link" onclick="handleLogoutButton()">Sign out/Log Off</span>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="../hue combos/huecombos.html">Hue Combos</a>
+               </li>
+            </ul>
+         </div>
+      </div>
+   </nav>
+
+   <div class="container">
+
+      <h3 class="title">*Living Room*</h3>
+
+      <div class="products-container">
+
+         <div class="product" data-name="p-1">
+            <img src="../templates/living_room/whiteyellowgrey.jpg" height="450px" width="300px" alt="">
+            <h3>Light Gray & Yellow Contemporary Style Living Room</h3>
+         </div>
+
+         <div class="product" data-name="p-2">
+            <img src="../templates/living_room/browblue.jpg" height="450px" width="300px" alt="">
+            <h3>Beige & Blue Traditional Style <br> Living Room</h3>
+         </div>
+
+         <div class="product" data-name="p-3">
+            <img src="../templates/living_room/greyandleathcush.jpg" height="450px" width="300px" alt="">
+            <h3>Rustic Gray Modern Style <br> Living Room</h3>
+         </div>
+
+         <div class="product" data-name="p-4">
+            <img src="../templates/living_room/allwhitegreycentab.jpg" height="450px" width="300px" alt="">
+            <h3>White-Gray Modern Style <br> Living Room</h3>
+         </div>
+
+         <div class="product" data-name="p-5">
+            <img src="../templates/living_room/greenshadesroomwebp.webp" height="450px" width="300px" alt="">
+            <h3>Forest Green Cozy Living Room</h3>
+         </div>
+
+         <div class="product" data-name="p-6">
+            <img src="../templates/living_room/diffstairgreyblu.jpg" height="450px" width="300px" alt="">
+            <h3>Play of Blues and Wooden Hues</h3>
+         </div>
+
+         <div class="product" data-name="p-7">
+            <img src="../templates/living_room/chandlwhitesof.jpeg" height="450px" width="300px" alt="">
+            <h3>Warm White Asian Style <br> Living Room</h3>
+         </div>
+
+         <div class="product" data-name="p-8">
+            <img src="../templates/living_room/bluesofgreencurt.jpg" height="450px" width="300px" alt="">
+            <h3>Viridescent & Blue Asian Style <br> Living Room</h3>
+         </div>
+
+         <div class="product" data-name="p-9">
+            <img src="../templates/living_room/whitesandyellow.jpg" height="450px" width="300px" alt="">
+            <h3>Tones of Warmth Asian Style <br> Living Room</h3>
+         </div>
+
+         <div class="product" data-name="p-10">
+            <img src="../templates/living_room/grey&blacktr.jpg" height="450px" width="300px" alt="">
+            <h3>Achromatic Modern Style Living Room</h3>
+         </div>
+
+         <div class="product" data-name="p-11">
+            <img src="../templates/living_room/freshwhitebluenstairs.jpg" height="450px" width="300px" alt="">
+            <h3>Plush Blue & Snow Asian Style Living Room</h3>
+         </div>
+
+         <div class="product" data-name="p-12">
+            <img src="../templates/living_room/offwhitewithpouffetab.jpg" height="450px" width="300px" alt="">
+            <h3>Cream Solitary Modern Style <br> Living Room</h3>
+         </div>
+
+         <div class="product" data-name="p-13">
+            <img src="../templates/living_room/cremwhitesoflamp.webp" height="450px" width="300px" alt="">
+            <h3>Simple Ivory Industrial Style <br> Living Room</h3>
+         </div>
+
+         <div class="product" data-name="p-14">
+            <img src="../templates/living_room/greysofbalcony.jpg" height="450px" width="300px" alt="">
+            <h3>Slate Gray Modern Style Living Room</h3>
+         </div>
+
+         <div class="product" data-name="p-15">
+            <img src="../templates/living_room/bluelush.webp" height="450px" width="300px" alt="">
+            <h3>Teal Blue Asian Style Living Room</h3>
+         </div>
+
+         <div class="product" data-name="p-16">
+            <img src="../templates/living_room/whitesofaaschand.jpg" height="450px" width="300px" alt="">
+            <h3>Porcelain Traditional Style Room</h3>
+         </div>
+
+         <div class="product" data-name="p-17">
+            <img src="../templates/living_room/rounsofblupink.jpg" height="450px" width="300px" alt="">
+            <h3>Peach and Cerulean Blue Scandinavian Style Living Room</h3>
+         </div>
+
+         <div class="product" data-name="p-18">
+            <img src="../templates/living_room/whitengreycolorcush.jpg" height="450px" width="300px" alt="">
+            <h3>Modern Style Living and Dining Space</h3>
+         </div>
+
+         <div class="product" data-name="p-19">
+            <img src="../templates/living_room/redchbluecremsof.webp" height="450px" width="300px" alt="">
+            <h3>Blue-White, with a tinge of Red Opulent Living Room</h3>
+         </div>
+
+         <div class="product" data-name="p-20">
+            <img src="../templates/living_room/vintageochrebluelook.jpg" height="450px" width="300px" alt="">
+            <h3>Tangerine & Blue Vintage Living Room</h3>
+         </div>
+
+         <div class="product" data-name="p-21">
+            <img src="../templates/living_room/whitebigchblue.webp" height="450px" width="300px" alt="">
+            <h3>Gray and DarkCyan Asian Style Living Room</h3>
+         </div>
+
+         <div class="product" data-name="p-22">
+            <img src="../templates/living_room/greyblueroun.jpg" height="450px" width="300px" alt="">
+            <h3>Navy and Coin Gray Contemporary Living Room</h3>
+         </div>
+
+         <div class="product" data-name="p-23">
+            <img src="../templates/living_room/greygoldchand.jpg" height="450px" width="300px" alt="">
+            <h3>Sunset Gold & White Elegant Living Room</h3>
+         </div>
+
+         <div class="product" data-name="p-24">
+            <img src="../templates/living_room/cushpouffeliveroom.jpg" height="450px" width="300px" alt="">
+            <h3>Eclectic Living Room</h3>
+         </div>
+
+         <div class="product" data-name="p-25">
+            <img src="../templates/living_room/bricklookwhite.jpg" height="450px" width="300px" alt="">
+            <h3>Shabby-Chic Style Living Room</h3>
+         </div>
+
+         <div class="product" data-name="p=26">
+            <img src="../templates/living_room/bluesofscarpmix.jpg" height="450px" width="300px" alt="">
+            <h3>Simple Pied Asian Style Living Room</h3>
+         </div>
+
+         <div class="product" data-name="p-27">
+            <img src="../templates/living_room/whiteandsandchairs.jpg" height="450px" width="300px" alt="">
+            <h3>Southwestern Living Room</h3>
+         </div>
+
+         <div class="product" data-name="p-28">
+            <img src="../templates/living_room/bluebrowchex.jpg" height="450px" width="300px" alt="">
+            <h3>Modern Style Spacious Living Room</h3>
+         </div>
+
+         <div class="product" data-name="p-29">
+            <img src="../templates/living_room/mint&whitesand.jpg" height="450px" width="300px" alt="">
+            <h3>A play of Whites and Greens</h3>
+         </div>
+
+         <div class="product" data-name="p-30">
+            <img src="../templates/living_room/greypinkliveroom.jpg" height="450px" width="300px" alt="">
+            <h3>Cloud Gray & Pink Seating Space</h3>
+         </div>
+
+         <div></div>
+
+         <div id="load-more"> load more </div>
+      </div>
+   </div>
+
+   <div class="products-preview">
+
+      <div class="preview" data-target="p-1">
+         <i class="fas fa-times"></i>
+         <img src="../templates/living_room/whiteyellowgrey.jpg" height="350" width="250" alt="">
+         <h3>Light Gray & Yellow Contemporary Style Living Room</h3>
+         <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <span>( 1250 )</span>
+         </div>
+         <div class="price">Estimated Cost: ₹75,000</div>
+      </div>
+
+      <div class="preview" data-target="p-2">
+         <i class="fas fa-times"></i>
+         <img src="../templates/living_room/browblue.jpg" height="350" width="250" alt="">
+         <h3>Beige & Blue Traditional Style Living Room</h3>
+         <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <span>( 986 )</span>
+         </div>
+         <div class="price">Esitmated Cost: ₹1,10,000</div>
+      </div>
+
+      <div class="preview" data-target="p-3">
+         <i class="fas fa-times"></i>
+         <img src="../templates/living_room/greyandleathcush.jpg" height="350" width="250" alt="">
+         <h3>Rustic Gray Modern Style <br> Living Room</h3>
+         <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <span>( 780 )</span>
+         </div>
+         <div class="price">Esitmated Cost: ₹1,25,000</div>
+      </div>
+
+      <div class="preview" data-target="p-4">
+         <i class="fas fa-times"></i>
+         <img src="../templates/living_room/allwhitegreycentab.jpg" height="350" width="250" alt="">
+         <h3>White-Gray Modern Style <br> Living Room</h3>
+         <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+            <span>( 560 )</span>
+         </div>
+         <div class="price">Esitmated Cost: ₹1,00,000</div>
+      </div>
+
+      <div class="preview" data-target="p-5">
+         <i class="fas fa-times"></i>
+         <img src="../templates/living_room/greenshadesroomwebp.webp" height="350" width="250" alt="">
+         <h3>Forest Green Cozy Living Room</h3>
+         <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <span>( 428 )</span>
+         </div>
+         <div class="price">Esitmated Cost: ₹60,000</div>
+      </div>
+
+      <div class="preview" data-target="p-6">
+         <i class="fas fa-times"></i>
+         <img src="../templates/living_room/diffstairgreyblu.jpg" height="350" width="250" alt="">
+         <h3>Play of Blues and Wooden Hues</h3>
+         <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+            <span>( 656 )</span>
+         </div>
+         <div class="price">Esitmated Cost: ₹1,00,000</div>
+      </div>
+
+      <div class="preview" data-target="p-7">
+         <i class="fas fa-times"></i>
+         <img src="../templates/living_room/chandlwhitesof.jpeg" height="350" width="250" alt="">
+         <h3>Warm White Asian Style <br> Living Room</h3>
+         <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+            <span>( 1568 )</span>
+         </div>
+         <div class="price">Esitmated Cost: ₹1,50,000</div>
+      </div>
+
+      <div class="preview" data-target="p-8">
+         <i class="fas fa-times"></i>
+         <img src="../templates/living_room/bluesofgreencurt.jpg" height="350" width="250" alt="">
+         <h3>Viridescent & Blue Asian Style <br> Living Room</h3>
+         <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <span>( 1082 )</span>
+         </div>
+         <div class="price">Esitmated Cost: ₹1,25,000</div>
+      </div>
+
+      <div class="preview" data-target="p-9">
+         <i class="fas fa-times"></i>
+         <img src="../templates/living_room/whitesandyellow.jpg" height="350" width="250" alt="">
+         <h3>Tones of Warmth Asian Style <br> Living Room</h3>
+         <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <span>( 897 )</span>
+         </div>
+         <div class="price">Esitmated Cost: ₹1,15,000</div>
+      </div>
+
+      <div class="preview" data-target="p-10">
+         <i class="fas fa-times"></i>
+         <img src="../templates/living_room/grey&blacktr.jpg" height="350" width="250" alt="">
+         <h3>Achromatic Modern Style Living Room</h3>
+         <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+            <span>( 250 )</span>
+         </div>
+         <div class="price">Esitmated Cost: ₹55,000</div>
+      </div>
+
+      <div class="preview" data-target="p-11">
+         <i class="fas fa-times"></i>
+         <img src="../templates/living_room/freshwhitebluenstairs.jpg" height="350" width="250" alt="">
+         <h3>Plush Blue & Snow Asian Style Living Room</h3>
+         <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <span>( 878 )</span>
+         </div>
+         <div class="price">Esitmated Cost: ₹1,40,000</div>
+      </div>
+
+      <div class="preview" data-target="p-12">
+         <i class="fas fa-times"></i>
+         <img src="../templates/living_room/offwhitewithpouffetab.jpg" height="350" width="250" alt="">
+         <h3>Cream Solitary Modern Style <br> Living Room</h3>
+         <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+            <span>( 795 )</span>
+         </div>
+         <div class="price">Esitmated Cost: ₹1,00,000</div>
+      </div>
+
+      <div class="preview" data-target="p-13">
+         <i class="fas fa-times"></i>
+         <img src="../templates/living_room/cremwhitesoflamp.webp" height="350" width="250" alt="">
+         <h3>Simple Ivory Industrial Style <br> Living Room</h3>
+         <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <span>( 657 )</span>
+         </div>
+         <div class="price">Esitmated Cost: ₹80,000</div>
+      </div>
+
+      <div class="preview" data-target="p-14">
+         <i class="fas fa-times"></i>
+         <img src="../templates/living_room/greysofbalcony.jpg" height="350" width="250" alt="">
+         <h3>Slate Gray Modern Style Living Room</h3>
+         <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <span>( 150 )</span>
+         </div>
+         <div class="price">Esitmated Cost: ₹50,000</div>
+      </div>
+
+      <div class="preview" data-target="p-15">
+         <i class="fas fa-times"></i>
+         <img src="../templates/living_room/bluelush.webp" height="350" width="250" alt="">
+         <h3>Teal Blue Asian Style Living Room</h3>
+         <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+            <span>( 345 )</span>
+         </div>
+         <div class="price">Esitmated Cost: ₹65,000</div>
+      </div>
+
+      <div class="preview" data-target="p-16">
+         <i class="fas fa-times"></i>
+         <img src="../templates/living_room/whitesofaaschand.jpg" height="350" width="250" alt="">
+         <h3>Porcelain Traditional Style Room</h3>
+         <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <span>( 875 )</span>
+         </div>
+         <div class="price">Esitmated Cost: ₹90,000</div>
+      </div>
+
+      <div class="preview" data-target="p-17">
+         <i class="fas fa-times"></i>
+         <img src="../templates/living_room/rounsofblupink.jpg" height="350" width="250" alt="">
+         <h3>Peach and Cerulean Blue Scandinavian Style Living Room</h3>
+         <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <span>( 2556 )</span>
+         </div>
+         <div class="price">Esitmated Cost: ₹1,25,000</div>
+      </div>
+
+      <div class="preview" data-target="p-18">
+         <i class="fas fa-times"></i>
+         <img src="../templates/living_room/whitengreycolorcush.jpg" height="350" width="250" alt="">
+         <h3>Modern Style Living and Dining Space</h3>
+         <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+            <span>( 349)</span>
+         </div>
+         <div class="price">Esitmated Cost: ₹65,000</div>
+      </div>
+
+      <div class="preview" data-target="p-19">
+         <i class="fas fa-times"></i>
+         <img src="../templates/living_room/redchbluecremsof.webp" height="350" width="250" alt="">
+         <h3>Blue-White, with a tinge of Red Opulent Living Room</h3>
+         <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <span>( 1450 )</span>
+         </div>
+         <div class="price">Esitmated Cost: ₹1,50,000</div>
+      </div>
+
+      <div class="preview" data-target="p-20">
+         <i class="fas fa-times"></i>
+         <img src="../templates/living_room/vintageochrebluelook.jpg" height="350" width="250" alt="">
+         <h3>Tangerine & Blue Vintage Living Room</h3>
+         <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <span>( 862 )</span>
+         </div>
+         <div class="price">Esitmated Cost: ₹85,000</div>
+      </div>
+
+      <div class="preview" data-target="p-21">
+         <i class="fas fa-times"></i>
+         <img src="../templates/living_room/whitebigchblue.webp" height="350" width="250" alt="">
+         <h3>Gray and DarkCyan Asian Style Living Room</h3>
+         <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <span>( 654 )</span>
+         </div>
+         <div class="price">Esitmated Cost: ₹75,000</div>
+      </div>
+
+      <div class="preview" data-target="p-22">
+         <i class="fas fa-times"></i>
+         <img src="../templates/living_room/greyblueroun.jpg" height="350" width="250" alt="">
+         <h3>Navy and Coin Gray Contemporary Living Room</h3>
+         <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+            <span>( 1340 )</span>
+         </div>
+         <div class="price">Esitmated Cost: ₹1,00,000</div>
+      </div>
+
+      <div class="preview" data-target="p-23">
+         <i class="fas fa-times"></i>
+         <img src="../templates/living_room/greygoldchand.jpg" height="350" width="250" alt="">
+         <h3>Sunset Gold & White Elegant Living Room</h3>
+         <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <span>( 2509 )</span>
+         </div>
+         <div class="price">Esitmated Cost: ₹1,80,000</div>
+      </div>
+
+      <div class="preview" data-target="p-24">
+         <i class="fas fa-times"></i>
+         <img src="../templates/living_room/cushpouffeliveroom.jpg" height="350" width="250" alt="">
+         <h3>Eclectic Living Room</h3>
+         <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <span>( 239 )</span>
+         </div>
+         <div class="price">Esitmated Cost: ₹60,000</div>
+      </div>
+
+      <div class="preview" data-target="p-25">
+         <i class="fas fa-times"></i>
+         <img src="../templates/living_room/bricklookwhite.jpg" height="350" width="250" alt="">
+         <h3>Shabby-Chic Style Living Room</h3>
+         <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+            <span>( 470 )</span>
+         </div>
+         <div class="price">Esitmated Cost: ₹60,000</div>
+      </div>
+
+      <div class="preview" data-target="p-26">
+         <i class="fas fa-times"></i>
+         <img src="../templates/living_room/bluesofscarpmix.jpg" height="350" width="250" alt="">
+         <h3>Simple Pied Asian Style Living Room</h3>
+         <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+            <span>( 861 )</span>
+         </div>
+         <div class="price">Esitmated Cost: ₹75,000</div>
+      </div>
+
+      <div class="preview" data-target="p-27">
+         <i class="fas fa-times"></i>
+         <img src="../templates/living_room/whiteandsandchairs.jpg" height="350" width="250" alt="">
+         <h3>Southwestern Living Room</h3>
+         <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <span>( 652 )</span>
+         </div>
+         <div class="price">Esitmated Cost: ₹80,000</div>
+      </div>
+
+      <div class="preview" data-target="p-28">
+         <i class="fas fa-times"></i>
+         <img src="../templates/living_room/bluebrowchex.jpg" height="350" width="250" alt="">
+         <h3>Modern Style Spacious Living Room</h3>
+         <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <span>( 1551 )</span>
+         </div>
+         <div class="price">Esitmated Cost: ₹1,30,000</div>
+      </div>
+
+      <div class="preview" data-target="p-29">
+         <i class="fas fa-times"></i>
+         <img src="../templates/living_room/mint&whitesand.jpg" height="350" width="250" alt="">
+         <h3>A play of Whites and Greens</h3>
+         <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <span>( 1437 )</span>
+         </div>
+         <div class="price">Esitmated Cost: ₹1,20,000</div>
+      </div>
+
+      <div class="preview" data-target="p-30">
+         <i class="fas fa-times"></i>
+         <img src="../templates/living_room/greypinkliveroom.jpg" height="350" width="250" alt="">
+         <h3>Cloud Gray & Pink Seating Space</h3>
+         <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <span>( 759 )</span>
+         </div>
+         <div class="price">Esitmated Cost: ₹80,000</div>
+      </div>
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+         crossorigin="anonymous"></script>
+
+</body>
+
+</html>

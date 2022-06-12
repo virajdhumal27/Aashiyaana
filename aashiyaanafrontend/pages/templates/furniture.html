@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+        <link
+        href="https://fonts.googleapis.com/css2?family=Allura&family=Dancing+Script:wght@500&family=Radio+Canada:wght@300&family=Raleway:wght@100&display=swap"
+        rel="stylesheet">        
+
+    <link rel="stylesheet" href="furniture.css">    
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand d-lg-none" href="../home/index.html"><img src="../home/logo.png" style="border-radius:50%" alt="Logo"></a>
+            <button class="navbar-toggler d-flex d-lg-none flex-column justify-content-around"  type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="toggler-icon top-bar"></span>
+                <span class="toggler-icon middle-bar"></span>
+                <span class="toggler-icon bottom-bar"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link " aria-current="page"  href="../home/index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link active dropdown-toggle" href="#" style="color: crimson;" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Templates
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color:#dc6af888; ">
+                            <li><a class="dropdown-item" style="color:#005583; font-weight: bold; font-size: 17px; padding: 9px 100px 9px 18px;" href="../templates/livingRoom.html">Living Room</a></li>
+                            <li><a class="dropdown-item" style="color:#005583; font-weight: bold; font-size: 17px; padding: 9px 100px 9px 18px;" href="../templates/bedroom.html">BedRoom</a></li>
+                            <li><a class="dropdown-item" style="color:#005583; font-weight: bold; font-size: 17px; padding: 9px 100px 9px 18px;" href="../templates/kitchen.html">Kitchen</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" style="color:#005583; font-weight: bold; font-size: 17px; padding: 9px 20px 9px 18px;" href="../templates/furniture.html">Custom Designs</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../home/index.html#footer">About Us</a>
+                    </li>
+                    <a class="navbar-brand d-none d-lg-block" href="../home/index.html"><img src="../home/logo.png" style="border-radius:50%" alt="Logo"></a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../login-signup/login_form.html">Sign Out/Log Off</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../hue combos/huecombos.html">Hue Combos</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <dvi class="content">
+        <div class="title">
+            <h3>"Custom Designs"</h3>
+        </div>
+        <div class="sidebar">
+            <div class="roomname">
+                <select name="" id="room-dropdown" onchange="drop()">
+                    <option value="liv">Living Room</option>
+                    <option value="bed">BedRoom</option>
+                </select>
+                <hr>
+            </div>
+            <div class="component">
+                <h4>Components</h4>
+                <div class="room-com" id="liv-room" >
+                    <h5>Sofa</h5>
+                    <div class="sofaimg">
+                        <img src="./DIYphotos/item1/item1btn-1.jpeg" id="item1" alt="" height="70px" width="60px" onclick="displayImage(id)">
+                        <img src="./DIYphotos/item2/item2btn-1.jpeg" id="item2" alt="" height="70px" width="60px" onclick="displayImage(id)">
+                        <img src="./DIYphotos/item3/item3btn-1.jpeg" id="item3" alt="" height="70px" width="60px" onclick="displayImage(id)">
+                    </div>
+                    <h5>Arm Chair</h5>
+                    <div class="sofaimg">
+                        <img src="./DIYphotos/item4/item4btn-1.jpeg" id="item4" alt="" height="70px" width="60px" onclick="displayImage(id)">
+                        <img src="./DIYphotos/item5/item5btn-1.jpeg" id="item5" alt="" height="70px" width="60px" onclick="displayImage(id)">
+                        <img src="./DIYphotos/item6/item6btn-1.jpeg" id="item6" alt="" height="70px" width="60px" onclick="displayImage(id)">
+                    </div>
+                    
+                </div>
+                <div class="room-com d-none" id="bed-room">
+                    <h5>Bed</h5>
+                    <div class="sofaimg">
+                        <img src="./DIYphotos/item7/item7btn-1.jpeg" id="item7" alt="" height="70px" width="60px" onclick="displayImage(id)">
+                        <img src="./DIYphotos/item8/item8btn-1.jpeg" id="item8" alt="" height="70px" width="60px" onclick="displayImage(id)">
+                        <img src="./DIYphotos/item9/item9btn-1.jpeg" id="item9" alt="" height="70px" width="60px" onclick="displayImage(id)">
+                    </div>
+                    <h5>Wardrobe</h5>
+                    <div class="sofaimg">
+                        <img src="./DIYphotos/ward1/ward1btn-1.jpeg" id="ward1" alt="" height="70px" width="60px" onclick="displayImage(id)">
+                        <img src="./DIYphotos/ward2/ward2btn-1.jpeg" id="ward2" alt="" height="70px" width="60px" onclick="displayImage(id)">
+                        <img src="./DIYphotos/ward3/ward3btn-1.jpeg" id="ward3" alt="" height="70px" width="60px" onclick="displayImage(id)">
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="main-img">
+                <img src="./DIYphotos/item1/item1btn-1.jpeg" id="displayMain" alt="" height="450px" width="600px">
+                
+            </div>
+            <div class="color-btn">
+                <input type="button" class="btn1" id="btn-1" onclick="changeColor(id)">
+                <input type="button" class="btn2" id="btn-2" onclick="changeColor(id)">
+                <input type="button" class="btn3" id="btn-3" onclick="changeColor(id)">
+            </div>
+        </div>
+    </dvi>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+
+    <script src="furniture.js"></script>
+   
+
+</body>
+</html>

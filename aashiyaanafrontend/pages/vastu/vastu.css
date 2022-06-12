@@ -1,0 +1,145 @@
+* {
+   font-family: 'Nunito', sans-serif;
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   outline: none;
+   border: none;
+   text-decoration: none;
+   transition: all .2s linear;
+   text-transform: capitalize;
+
+}
+
+body{
+   width: 100%;
+   background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url("./realistic-galaxy-background_23-2148991322.webp");
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-attachment: fixed;
+}
+
+.navbar{
+   background-image: linear-gradient(to right,#e2c2fe, #f6aedc);
+}
+
+.navbar-brand img{
+   width: 70px;
+   zoom: 130%;
+}
+
+.navbar-brand{
+   margin-right: 0;
+   padding: 0 1em;
+}
+
+.navbar-nav{
+   align-items: center;
+}
+
+.navbar .navbar-nav .nav-link{
+   color: #000080;
+   font-size: 1.1em;
+   padding: .5em 1em;
+   font-weight: bold;
+}
+
+
+
+.navbar .navbar-nav .nav-link:hover{
+   /* background-color: crimson; */
+   color: crimson;
+}
+
+.navbar-toggler{
+   width: 20px;
+   height: 20px;
+   position: relative;
+   transition: .5s ease-in-out;
+}
+
+.navbar-toggler,
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+   outline: none;
+   box-shadow: none;
+   border: 0;
+}
+
+.navbar-toggler span{
+   margin: 0;
+   padding: 0;
+}
+
+.toggler-icon{
+   display: block;
+   position: absolute;
+   height: 3px;
+   width: 100%;
+   background: red;
+   border-radius: 1px;
+   opacity: 1;
+   left: 0;
+   transform: rotate(0deg);
+   transition: .25s ease-in-out;
+}
+
+.middle-bar{
+   margin-top: 0px;
+}
+
+/* When navigation is clicked */
+
+.navbar-toggler .top-bar{
+   margin-top: 0px;
+   transform: rotate(135deg);
+}
+
+
+.navbar-toggler .middle-bar{
+   opacity: 0;
+   filter: alpha(opacity=0);
+}
+
+
+.navbar-toggler .bottom-bar{
+   margin-top: 0px;
+   transform: rotate(-135deg);
+}
+
+/* State when the navbar is collapsed */
+
+.navbar-toggler.collapsed .top-bar{
+   margin-top: -20px;
+   transform: rotate(0deg);
+}
+
+.navbar-toggler.collapsed .middle-bar{
+   opacity: 1;
+   filter: alpha(opacity=100);
+}
+
+.navbar-toggler.collapsed .bottom-bar{
+   margin-top: 20px;
+   transform: rotate(0deg);
+} 
+
+/* Color of 3 lines */
+
+.navbar-toggler.collapsed .toggler-icon{
+   background: linear-gradient(263deg, rgb(226, 13, 241) 0%, rgb(255, 0, 132) 100%);
+}
+
+.section{
+   margin-top: 150px;
+   color: #fff;
+   text-align: center;
+}
+
+.section h1{
+   text-decoration: underline;
+   margin-bottom: 50px;
+}
+
+ 

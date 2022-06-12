@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="template.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Allura&family=Dancing+Script:wght@500&family=Radio+Canada:wght@300&family=Raleway:wght@100&display=swap"
+        rel="stylesheet">
+
+<script>
+    let livingRoomData = false;
+    let bedroomData = false;
+    let kitchenData = true;
+</script>
+
+    <!-- custom js file link  -->
+    <script src="templates.js" defer></script>
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg  fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand d-lg-none" href="../home/index.html"><img src="./logo.png" style="border-radius:50%"
+                    alt="Logo"></a>
+            <button class="navbar-toggler d-flex d-lg-none flex-column justify-content-around" type="button"
+                data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="toggler-icon top-bar"></span>
+                <span class="toggler-icon middle-bar"></span>
+                <span class="toggler-icon bottom-bar"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="../home/index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link active dropdown-toggle" href="#" style="color: crimson;" id="navbarDropdown"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Templates
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color:#dc6af888; ">
+                            <li><a class="dropdown-item"
+                                    style="color:#005583; font-weight: bold; font-size: 17px; padding: 9px 100px 9px 18px;"
+                                    href="../templates/livingRoom.html">Living Room</a></li>
+                            <li><a class="dropdown-item"
+                                    style="color:#005583; font-weight: bold; font-size: 17px; padding: 9px 100px 9px 18px;"
+                                    href="../templates/bedroom.html">BedRoom</a></li>
+                            <li><a class="dropdown-item"
+                                    style="color:#005583; font-weight: bold; font-size: 17px; padding: 9px 100px 9px 18px;"
+                                    href="../templates/kitchen.html">Kitchen</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item"
+                                    style="color:#005583; font-weight: bold; font-size: 17px; padding: 9px 20px 9px 18px;"
+                                    href="../templates/furniture.html">Custom Designs</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../home/index.html#footer">About Us</a>
+                    </li>
+                    <a class="navbar-brand d-none d-lg-block" href="../home/index.html"><img src="../home/logo.png"
+                            style="border-radius:50%" alt="Logo"></a>
+                    <li class="nav-item">
+                        <span class="nav-link" onclick="handleLogoutButton()">Sign out/Log Off</span>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../hue combos/huecombos.html">Hue Combos</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h3 class="title">*Bed Room*</h3>
+        <div class="products-container">
+            <div class="product" data-name="p-1">
+                <img src="../templates/bedroom/yellwallbed.webp" height="450px" width="300px" alt="">
+                <h3>Vintage Style Bedroom</h3>
+            </div>
+
+            <div class="product" data-name="p-2">
+                <img src="../templates/bedroom/bluemattrblframes.jpg" height="450px" width="300px" alt="">
+                <h3>Daisy Modern Style Bedroom</h3>
+            </div>
+
+            <div class="product" data-name="p-3">
+                <img src="../templates/bedroom/openviewbedroom.webp" height="450px" width="300px" alt="">
+                <h3>Wooden Vintage Style Bedroom</h3>
+            </div>
+
+            <div class="product" data-name="p-4">
+                <img src="../templates/bedroom/greydiffheadb.jpg" height="450px" width="300px" alt="">
+                <h3>Victorian Style Bedroom</h3>
+            </div>
+
+            <div class="product" data-name="p-5">
+                <img src="../templates/bedroom/brightpink&green.jpeg" height="450px" width="300px" alt="">
+                <h3>Pink & Green Cozy Bedroom</h3>
+            </div>
+
+            <div class="product" data-name="p-6">
+                <img src="../templates/bedroom/greyfurbedpouffe.jpg" height="450px" width="300px" alt="">
+                <h3>Plush Fog Gray Spacious Bedroom</h3>
+            </div>
+
+            <div class="product" data-name="p-7">
+                <img src="../templates/bedroom/bluewhitewash.jpeg" height="450px" width="300px" alt="">
+                <h3>Admiral Snow Modern Style Bedroom</h3>
+            </div>
+
+            <div class="product" data-name="p-8">
+                <img src="../templates/bedroom/whitebedorrsandsofa.jpg" height="450px" width="300px" alt="">
+                <h3>Sage Biscotti Asian Style Bedroom</h3>
+            </div>
+
+            <div class="product" data-name="p-9">
+                <img src="../templates/bedroom/orangishpinkwhite.webp" height="450px" width="300px" alt="">
+                <h3>Pink and White Floral Bedroom</h3>
+            </div>
+
+            <div class="product" data-name="p-10">
+                <img src="../templates/bedroom/white&bluebedsanddraw.jpg" height="450px" width="300px" alt="">
+                <h3>Modern Style Bedroom</h3>
+            </div>
+
+            <div class="product" data-name="p-11">
+                <img src="../templates/bedroom/simplelooklamp.jpg" height="450px" width="300px" alt="">
+                <h3>Porpoise and porcelain Bedroom</h3>
+            </div>
+
+            <div class="product" data-name="p-12">
+                <img src="../templates/bedroom/whitegreyweirdframe.jpg" height="450px" width="300px" alt="">
+                <h3>Gray cashmere Asian Style Bedroom</h3>
+            </div>
+
+            <div class="product" data-name="p-13">
+                <img src="../templates/bedroom/orangebluecushcrem.jpeg" height="450px" width="300px" alt="">
+                <h3>Bohemian Style Bedroom</h3>
+            </div>
+
+            <div class="product" data-name="p-14">
+                <img src="../templates/bedroom/sandwhitegreycarp.jpg" height="450px" width="300px" alt="">
+                <h3>Industrial Style Bedroom</h3>
+            </div>
+
+            <div class="product" data-name="p-15">
+                <img src="../templates/bedroom/pouffeblackring.jpg" height="450px" width="300px" alt="">
+                <h3>Modern Style Bedroom</h3>
+            </div>
+
+            <div class="product" data-name="p-16">
+                <img src="../templates/bedroom/halfanwhitebed.jpg" height="450px" width="300px" alt="">
+                <h3>Victorian Style Bedroom</h3>
+            </div>
+
+            <div class="product" data-name="p-17">
+                <img src="../templates/bedroom/pinkbedroom.png" height="450px" width="300px" alt="">
+                <h3>Utterly Pink Modern Style Bedroom</h3>
+            </div>
+
+            <div class="product" data-name="p-18">
+                <img src="../templates/bedroom/sandwhbluechand.jpg" height="450px" width="300px" alt="">
+                <h3>Tortilla Victorian Style Bedroom</h3>
+            </div>
+
+            <div class="product" data-name="p-19">
+                <img src="../templates/bedroom/smallroom.jpg" height="450px" width="300px" alt="">
+                <h3>Bohemian Style Cozy Bedroom</h3>
+            </div>
+
+            <div class="product" data-name="p-20">
+                <img src="../templates/bedroom/grey2sofwhitebed.jpg" height="450px" width="300px" alt="">
+                <h3>Scandinavian  Style Bedroom</h3>
+            </div>
+
+            <div class="product" data-name="p-21">
+                <img src="../templates/bedroom/cremwhitebedcirmirr.jpg" height="450px" width="300px" alt="">
+                <h3>Modern Style Bedroom</h3>
+            </div>
+
+            <div class="product" data-name="p-22">
+                <img src="../templates/bedroom/metal&white.jpg" height="450px" width="300px" alt="">
+                <h3>Vintage Modern Style Bedroom</h3>
+            </div>
+
+            <div class="product" data-name="p-23">
+                <img src="../templates/bedroom/pinkchairbedwhite.jpg" height="450px" width="300px" alt="">
+                <h3>Simple Asian Style Bedroom</h3>
+            </div>
+
+            <div class="product" data-name="p-24">
+                <img src="../templates/bedroom/greybluecupwhite.jpg" height="450px" width="300px" alt="">
+                <h3>Cream & Gray Victorian Style Bedroom</h3>
+            </div>
+
+            <div class="product" data-name="p-25">
+                <img src="../templates/bedroom/whiteblunicefur.jpg" height="450px" width="300px" alt="">
+                <h3>Chiffon Sugar Cookie Asian Style Bedroom</h3>
+            </div>
+
+            <div class="product" data-name="p-26">
+                <img src="../templates/bedroom/bluepinkcrem.jpg" height="450px" width="300px" alt="">
+                <h3>Teal & Pink Modern Style Bedroom</h3>
+            </div>
+
+            <div class="product" data-name="p=27">
+                <img src="../templates/bedroom/dullbrheadbframe.jpg" height="450px" width="300px" alt="">
+                <h3>Asian Style Bedroom</h3>
+            </div>
+
+            <div class="product" data-name="p-28">
+                <img src="../templates/bedroom/trigreyorangecush.jpg" height="450px" width="300px" alt="">
+                <h3>Tangerine And Blue Asian Style Bedroom</h3>
+            </div>
+
+            <div class="product" data-name="p-29">
+                <img src="../templates/bedroom/blueochrewhite.jpg" height="450px" width="300px" alt="">
+                <h3>Moxie Blue Scandinavian Style Bedroom</h3>
+            </div>
+
+            <div class="product" data-name="p-30">
+                <img src="../templates/bedroom/woodutil.webp" height="450px" width="300px" alt="">
+                <h3>Chestnut Teak Bed-se</h3>
+            </div>
+
+            <div></div>
+
+            <div id="load-more"> load more </div>
+        </div>
+    </div>
+
+    <div class="products-preview">
+
+        <div class="preview" data-target="p-1">
+            <i class="fas fa-times"></i>
+            <img src="../templates/bedroom/yellwallbed.webp" height="350" width="250" alt="">
+            <h3>Vintage Style Bedroom</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>( 345 )</span>
+            </div>
+            <div class="price">Estimated price : ₹60,000</div>
+        </div>
+
+        <div class="preview" data-target="p-2">
+            <i class="fas fa-times"></i>
+            <img src="../templates/bedroom/bluemattrblframes.jpg" height="350" width="250" alt="">
+            <h3>Daisy Modern Style Bedroom</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <span>( 557 )</span>
+            </div>
+            <div class="price">Estimated price : ₹80,000</div>
+        </div>
+
+        <div class="preview" data-target="p-3">
+            <i class="fas fa-times"></i>
+            <img src="../templates/bedroom/openviewbedroom.webp" height="350" width="250" alt="">
+            <h3>Wooden Vintage Style Bedroom</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <span>( 652 )</span>
+            </div>
+            <div class="price">Estimated price : ₹80,000</div>
+        </div>
+
+        <div class="preview" data-target="p-4">
+            <i class="fas fa-times"></i>
+            <img src="../templates/bedroom/greydiffheadb.jpg" height="350" width="250" alt="">
+            <h3>Victorian Style Bedroom</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>( 798 )</span>
+            </div>
+            <div class="price">Estimated price : ₹70,000</div>
+        </div>
+
+        <div class="preview" data-target="p-5">
+            <i class="fas fa-times"></i>
+            <img src="../templates/bedroom/brightpink&green.jpeg" height="350" width="250" alt="">
+            <h3>Pink & Green Cozy Bedroom</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>( 750 )</span>
+            </div>
+            <div class="price">Estimated price : ₹90,000</div>
+        </div>
+
+        <div class="preview" data-target="p-6">
+            <i class="fas fa-times"></i>
+            <img src="../templates/bedroom/greyfurbedpouffe.jpg" height="350" width="250" alt="">
+            <h3>Plush Fog Gray Spacious Bedroom</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <span>( 1256 )</span>
+            </div>
+            <div class="price">Estimated price : ₹1,20,000</div>
+        </div>
+
+        <div class="preview" data-target="p-7">
+            <i class="fas fa-times"></i>
+            <img src="../templates/bedroom/bluewhitewash.jpeg" height="350" width="250" alt="">
+            <h3>Admiral Snow Modern Style Bedroom</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <span>( 1471 )</span>
+            </div>
+            <div class="price">Estimated price : ₹1,10,000</div>
+        </div>
+
+        <div class="preview" data-target="p-8">
+            <i class="fas fa-times"></i>
+            <img src="../templates/bedroom/whitebedorrsandsofa.jpg" height="350" width="250" alt="">
+            <h3>Sage Biscotti Asian Style Bedroom</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <span>( 565 )</span>
+            </div>
+            <div class="price">Estimated price : ₹80,000</div>
+        </div>
+
+        <div class="preview" data-target="p-9">
+            <i class="fas fa-times"></i>
+            <img src="../templates/bedroom/orangishpinkwhite.webp" height="350" width="250" alt="">
+            <h3>Pink and White Floral Bedroom</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>( 997 )</span>
+            </div>
+            <div class="price">Estimated price : ₹1,00,000</div>
+        </div>
+
+        <div class="preview" data-target="p-10">
+            <i class="fas fa-times"></i>
+            <img src="../templates/bedroom/white&bluebedsanddraw.jpg" height="350" width="250" alt="">
+            <h3>Modern Style Bedroom</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <span>( 1890 )</span>
+            </div>
+            <div class="price">Estimated price : ₹1,50,000</div>
+        </div>
+
+        <div class="preview" data-target="p-11">
+            <i class="fas fa-times"></i>
+            <img src="../templates/bedroom/simplelooklamp.jpg" height="350" width="250" alt="">
+            <h3>Porpoise and porcelain Bedroom</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <span>( 650 )</span>
+            </div>
+            <div class="price">Estimated price : ₹60,000</div>
+        </div>
+
+        <div class="preview" data-target="p-12">
+            <i class="fas fa-times"></i>
+            <img src="../templates/bedroom/whitegreyweirdframe.jpg" height="350" width="250" alt="">
+            <h3>Gray cashmere Asian Style Bedroom</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>( 835 )</span>
+            </div>
+            <div class="price">Estimated price : ₹1,00,000</div>
+        </div>
+
+        <div class="preview" data-target="p-13">
+            <i class="fas fa-times"></i>
+            <img src="../templates/bedroom/orangebluecushcrem.jpeg" height="350" width="250" alt="">
+            <h3>Bohemian Style Bedroom</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <span>( 566 )</span>
+            </div>
+            <div class="price">Estimated price : ₹80,000</div>
+        </div>
+
+        <div class="preview" data-target="p-14">
+            <i class="fas fa-times"></i>
+            <img src="../templates/bedroom/sandwhitegreycarp.jpg" height="350" width="250" alt="">
+            <h3>Industrial Style Bedroom</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>( 950 )</span>
+            </div>
+            <div class="price">Estimated price : ₹1,00,000</div>
+        </div>
+
+        <div class="preview" data-target="p-15">
+            <i class="fas fa-times"></i>
+            <img src="../templates/bedroom/pouffeblackring.jpg" height="350" width="250" alt="">
+            <h3>Modern Style Bedroom</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <span>( 1352 )</span>
+            </div>
+            <div class="price">Estimated price : ₹1,20,000</div>
+        </div>
+
+        <div class="preview" data-target="p-16">
+            <i class="fas fa-times"></i>
+            <img src="../templates/bedroom/halfanwhitebed.jpg" height="350" width="250" alt="">
+            <h3>Victorian Style Bedroom</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <span>( 1850 )</span>
+            </div>
+            <div class="price">Estimated price : ₹1,10,000</div>
+        </div>
+
+        <div class="preview" data-target="p-17">
+            <i class="fas fa-times"></i>
+            <img src="../templates/bedroom/pinkbedroom.png" height="350" width="250" alt="">
+            <h3>Utterly Pink Modern Style Bedroom</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <span>( 2508 )</span>
+            </div>
+            <div class="price">Estimated price : ₹1,50,000</div>
+        </div>
+
+        <div class="preview" data-target="p-18">
+            <i class="fas fa-times"></i>
+            <img src="../templates/bedroom/sandwhbluechand.jpg" height="350" width="250" alt="">
+            <h3>Tortilla Victorian Style Bedroom</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <span>( 2022 )</span>
+            </div>
+            <div class="price">Estimated price : ₹1,40,000</div>
+        </div>
+
+        <div class="preview" data-target="p-19">
+            <i class="fas fa-times"></i>
+            <img src="../templates/bedroom/smallroom.jpg" height="350" width="250" alt="">
+            <h3>Bohemian Style Cozy Bedroom</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>( 750 )</span>
+            </div>
+            <div class="price">Estimated price : ₹90,000</div>
+        </div>
+
+        <div class="preview" data-target="p-20">
+            <i class="fas fa-times"></i>
+            <img src="../templates/bedroom/grey2sofwhitebed.jpg" height="350" width="250" alt="">
+            <h3>Scandinavian  Style Bedroom</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <span>( 357 )</span>
+            </div>
+            <div class="price">Estimated price : ₹80,000</div>
+        </div>
+
+        <div class="preview" data-target="p-21">
+            <i class="fas fa-times"></i>
+            <img src="../templates/bedroom/cremwhitebedcirmirr.jpg" height="350" width="250" alt="">
+            <h3>Modern Style Bedroom</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>( 1285 )</span>
+            </div>
+            <div class="price">Estimated price : ₹1,00,000</div>
+        </div>
+
+        <div class="preview" data-target="p-22">
+            <i class="fas fa-times"></i>
+            <img src="../templates/bedroom/metal&white.jpg" height="350" width="250" alt="">
+            <h3>Vintage Modern Style Bedroom</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <span>( 630 )</span>
+            </div>
+            <div class="price">Estimated price : ₹90,000</div>
+        </div>
+
+        <div class="preview" data-target="p-23">
+            <i class="fas fa-times"></i>
+            <img src="../templates/bedroom/pinkchairbedwhite.jpg" height="350" width="250" alt="">
+            <h3>Simple Asian Style Bedroom</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>( 752 )</span>
+            </div>
+            <div class="price">Estimated price : ₹1,00,000</div>
+        </div>
+
+        <div class="preview" data-target="p-24">
+            <i class="fas fa-times"></i>
+            <img src="../templates/bedroom/greybluecupwhite.jpg" height="350" width="250" alt="">
+            <h3>Cream & Gray Victorian Style Bedroom</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>( 558 )</span>
+            </div>
+            <div class="price">Estimated price : ₹90,000</div>
+        </div>
+
+        <div class="preview" data-target="p-25">
+            <i class="fas fa-times"></i>
+            <img src="../templates/bedroom/whiteblunicefur.jpg" height="350" width="250" alt="">
+            <h3>Chiffon Sugar Cookie Asian Style Bedroom</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <span>( 1634 )</span>
+            </div>
+            <div class="price">Estimated price : ₹1,10,000</div>
+        </div>
+
+        <div class="preview" data-target="p-26">
+            <i class="fas fa-times"></i>
+            <img src="../templates/bedroom/bluepinkcrem.jpg" height="350" width="250" alt="">
+            <h3>Teal & Pink Modern Style Bedroom</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <span>( 1893 )</span>
+            </div>
+            <div class="price">Estimated price : ₹1,30,000</div>
+        </div>
+
+        <div class="preview" data-target="p-27">
+            <i class="fas fa-times"></i>
+            <img src="../templates/bedroom/dullbrheadbframe.jpg" height="350" width="250" alt="">
+            <h3>Asian Style Bedroom</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>( 1156 )</span>
+            </div>
+            <div class="price">Estimated price : ₹1,00,000</div>
+        </div>
+
+        <div class="preview" data-target="p-28">
+            <i class="fas fa-times"></i>
+            <img src="../templates/bedroom/trigreyorangecush.jpg" height="350" width="250" alt="">
+            <h3>Tangerine And Blue Asian Style Bedroom</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>( 923 )</span>
+            </div>
+            <div class="price">Estimated price : ₹90,000</div>
+        </div>
+
+        <div class="preview" data-target="p-29">
+            <i class="fas fa-times"></i>
+            <img src="../templates/bedroom/blueochrewhite.jpg" height="350" width="250" alt="">
+            <h3>Moxie Blue Scandinavian Style Bedroom</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <span>( 3305 )</span>
+            </div>
+            <div class="price">Estimated price : ₹1,60,000</div>
+        </div>
+
+        <div class="preview" data-target="p-30">
+            <i class="fas fa-times"></i>
+            <img src="../templates/bedroom/woodutil.webp" height="350" width="250" alt="">
+            <h3>Chestnut Teak Bed-se</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>( 250 )</span>
+            </div>
+            <div class="price">Estimated price : ₹1,00,000</div>
+        </div>
+    </div>
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
